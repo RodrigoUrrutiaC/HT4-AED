@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Vector;
+import java.util.Scanner;
 
 /**
  * @author Rodrigo Urrutia 16139
@@ -29,7 +30,7 @@ public class MainCalculadora extends StackVector {
             String linea;
             
             while((linea = br.readLine())!=null){
-                String respuesta= c.calcular(linea);
+                String respuesta = c.calcular(linea);
                 System.out.println(""+linea+" = "+respuesta);
            }
             
@@ -38,7 +39,17 @@ public class MainCalculadora extends StackVector {
         catch(Exception ex){
             System.out.print("INCAPACIDAD PARA LEER EL ARCHIVO .TXT");
         }  
-         
+        
+        Scanner userInput = new Scanner(System.in);
+        ListFactory listFactory = new ListFactory();
+        StackFactory stackFactory = new StackFactory();
+        
+        System.out.println("¿Que tipo de cadena quiere usar? ARRAY / VECTOR / LIST");
+        if(userInput.hasNextLine()){
+            String typeOfStack = userInput.nextLine();
+            //listFactory.getStack(typeOfStack);
+            stackFactory.getStack(typeOfStack);
+        }
     }
     
 }

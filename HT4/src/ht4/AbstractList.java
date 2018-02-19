@@ -9,7 +9,7 @@ package ht4;
 
 import java.util.Iterator;
 
-public abstract class AbstractList<E> implements List<E>,Stack<E> {
+public abstract class AbstractList<E> implements List<E> {
    public AbstractList()
    // post: does nothing
    {
@@ -120,23 +120,4 @@ public abstract class AbstractList<E> implements List<E>,Stack<E> {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public void push(E item) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public E pop() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public E peek() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public boolean empty() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
