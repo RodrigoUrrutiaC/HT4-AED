@@ -1,10 +1,10 @@
 
-package calculadora;
+package ht4;
 
 /**
  * @author Rodrigo Urrutia 16139
  * @author Kevin Macario 17369
- * @version 01.02.2018
+ * @version 19.02.2018
  */
 
 /**
