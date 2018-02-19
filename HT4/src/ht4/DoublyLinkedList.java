@@ -61,4 +61,9 @@ public class DoublyLinkedList<E> extends AbstractList<E>{
        return temp.value();
     }
 
+    @Override
+    public int lastIndexOf(E value) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

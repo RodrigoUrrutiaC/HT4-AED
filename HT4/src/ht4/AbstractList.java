@@ -91,11 +91,6 @@ public abstract class AbstractList<E> implements List<E> {
     }
 
     @Override
-    public int lastIndexOf(E value) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
     public E get(int i) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
