@@ -13,30 +13,65 @@ package ht4;
  */
 public class Calculadora implements CalculadoraI{
 
-    Stack<String> baraja;
+    private static Calculadora instance = null;
+    
+    public Calculadora(){
+        
+    }
+    
+    public static Calculadora getInstance(){
+        if(instance == null){
+                instance = new Calculadora();
+        }
+        return instance;
+    }
     /**
      * Constructor de Calculadora con parametros
      */
-	public Calculadora() {
-		baraja = new StackVector();
-	}
-        /**
-         * metodo implementado de la clase CalculadoraI, reliza las operaciones y separaciones de escritura tipo postfix
-         * @param exp, linea con escritura postfix
-         * @return resultado de la operacion
-         */
+	
+    /**
+     * metodo implementado de la clase CalculadoraI, reliza las operaciones y separaciones de escritura tipo postfix
+     * @param exp, linea con escritura postfix
+     * @param x
+     * @param y
+     * @return resultado de la operacion
+     */
+    
     @Override
-    public String calcular(String exp) {
+    public String calcular(String exp, int x, int y) {
         
+        StackFactory<String>  stackF = new StackFactory<>();     
+        Stack<String> cadena = null;
         
+        switch (x) {
+            case 1:
+                cadena = stackF.getStack("ARRAY","");
+                break;
+            case 2:
+                cadena = stackF.getStack("VECTOR","");
+                break;
+            case 3:
+                switch (y) {
+                    case 1:
+                        cadena = stackF.getStack("LISTA","SIMPLE");
+                        break;
+                    case 2:
+                        cadena = stackF.getStack("LISTA","DOBLE");
+                        break;
+                    case 3:
+                        cadena = stackF.getStack("LISTA","CIRCULAR");
+                        break;
+                }   
+                break;               
+        }
+        
+        Stack<String> baraja = cadena;
+            
         char j;
         String respuesta, k;
         int t, ans, p;
-        //ciclo que define que operacion se debe realizar
-        
-        //try y catch para realizar los calculos indicados por el string. Retorna MATH ERROR si se ingresa algun caracter
-        //no valido o si se da la division entre cero
-        try{
+
+//        try{
             for(int i=0; i< exp.length(); i++){
            
            j = exp.charAt(i);
@@ -94,11 +129,11 @@ public class Calculadora implements CalculadoraI{
             
         return respuesta;
               
-        }
-        
-        catch(Exception e){
-            return "MATH ERROR";
-        }  
+//        }
+//        
+//        catch(Exception e){
+//            return "MATH ERROR";
+//        }  
         
     }
 

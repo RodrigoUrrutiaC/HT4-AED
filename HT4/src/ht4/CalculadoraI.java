@@ -17,6 +17,6 @@ public interface CalculadoraI {
      * @param exp, linea con operaciones postfix
      * @return resultado de la operacion
      */
-    public String calcular(String exp);
+    public String calcular(String exp, int x, int y);
     
 }

@@ -12,7 +12,7 @@ package ht4;
  * interface de stack
  * @param <E>
  */
-public interface Stack <E> 
+public interface Stack<E> 
 {
     /**
      * metodo que que le da push al primer intem del stack
