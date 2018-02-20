@@ -18,16 +18,17 @@ public class Calculadora implements CalculadoraI{
     public Calculadora(){
         
     }
-    
+    /**
+     * Singleton
+     * @return una instancia de la clase
+     */
     public static Calculadora getInstance(){
         if(instance == null){
                 instance = new Calculadora();
         }
         return instance;
     }
-    /**
-     * Constructor de Calculadora con parametros
-     */
+
 	
     /**
      * metodo implementado de la clase CalculadoraI, reliza las operaciones y separaciones de escritura tipo postfix
@@ -36,7 +37,6 @@ public class Calculadora implements CalculadoraI{
      * @param y
      * @return resultado de la operacion
      */
-    
     @Override
     public String calcular(String exp, int x, int y) {
         

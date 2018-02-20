@@ -5,15 +5,22 @@ package ht4;
  * @author Rodrigo Urrutia 16139
  * @author Kevin Macario 17369
  * @version 19.02.2018
- * @param <E>
  */
 
+/**
+ * DoublyLinkedList
+ * @author Kevin Macario
+ * @param <E> 
+ */
 public class DoublyLinkedList<E> extends AbstractList<E> {
    
     protected int count;
     protected DoublyLinkedNode<E> head;
     protected DoublyLinkedNode<E> tail;
 
+    /**
+     * Construcor de la lista
+     */
     public DoublyLinkedList(){
     // post: constructs an empty list 
         head = null;
@@ -21,7 +28,10 @@ public class DoublyLinkedList<E> extends AbstractList<E> {
         count = 0;
     }
 
-
+    /**
+     * metodo que agrega elemento al final de la lista
+     * @param value generico
+     */
     @Override
     public void addFirst(E value){
         // pre: value is not null
@@ -33,6 +43,10 @@ public class DoublyLinkedList<E> extends AbstractList<E> {
         count++;
     }
 
+        /**
+     * metodo que obtiene elemento al principio de la lista
+     * @return valor del elemento
+     */
     @Override
     public void addLast(E value){
         // pre: value is not null
@@ -44,6 +58,10 @@ public class DoublyLinkedList<E> extends AbstractList<E> {
         count++;
     }
 
+        /**
+     * metodo que revueve el ultimo elemento de la lista
+     * @return valor del elemento
+     */
     @Override
     public E removeLast(){
         // pre: list is not empty
@@ -59,11 +77,18 @@ public class DoublyLinkedList<E> extends AbstractList<E> {
         return temp.value();
 }
 
+        /**
+     * metodo que obtiene el largo de la lista
+     * @return largo de la lista
+     */
     @Override
     public int size() {
         return count;
     }
 
+       /**
+     * metodo que limpia la lista
+     */
     @Override
     public void clear() {
         head = null;
@@ -71,16 +96,28 @@ public class DoublyLinkedList<E> extends AbstractList<E> {
         count = 0;
     }
 
+        /**
+     * metodo que obtiene elemento al principio de la lista
+     * @return valor del elemento
+     */
     @Override
     public E getFirst() {
         return head.value();
     }
 
+        /**
+     * metodo que obtiene elemento al final de la lista
+     * @return valor del elemento
+     */
     @Override
     public E getLast() {
         return tail.value();
     }
 
+        /**
+     * metodo que revueve el ultimo elemento de la lista
+     * @return valor del elemento
+     */
     @Override
     public E removeFirst() {
      DoublyLinkedNode<E> temp = head;

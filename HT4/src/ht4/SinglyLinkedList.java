@@ -8,22 +8,38 @@ package ht4;
  * @param <E>
  */
 
+/**
+ * SinglyLinkedList
+ * clase de lista simple que extiende de lista abstracta
+ * @param <E> generico
+ */
 public class SinglyLinkedList<E> extends AbstractList<E> {
     protected int count; // list size
     protected Node<E> head; // ref. to first element
 
+    /**
+     * constructor de la lista simple
+     */
      public SinglyLinkedList(){
     // post: generates an empty list
        head = null;
        count = 0;
     }
 
+         /**
+     * metodo que obtiene si la lista esta vacia
+     * @return boolean indicando estado de la lista
+     */
     @Override
     public int size(){
         // post: returns number of elements in list
         return count;
     }
 
+        /**
+     * metodo que agrega elemento al principio de la lista
+     * @param value generico
+     */
     @Override
     public void addFirst(E value){
         // post: value is added to beginning of list
@@ -33,6 +49,10 @@ public class SinglyLinkedList<E> extends AbstractList<E> {
     count++;
     }
 
+        /**
+     * metodo que remueve el primer elemento de la lista
+     * @return valor del elemento
+     */
     @Override
     public E removeFirst(){
         // pre: list is not empty
@@ -43,6 +63,10 @@ public class SinglyLinkedList<E> extends AbstractList<E> {
         return temp.value();
    }
 
+        /**
+     * metodo que obtiene elemento al principio de la lista
+     * @return valor del elemento
+     */
     @Override
     public E getFirst(){
         // pre: list is not empty
@@ -50,6 +74,10 @@ public class SinglyLinkedList<E> extends AbstractList<E> {
         return head.value();
    }
 
+        /**
+     * metodo que agrega elemento al final de la lista
+     * @param value generico
+     */
     @Override
     public void addLast(E value){
         // post: adds value to end of list
@@ -68,12 +96,19 @@ public class SinglyLinkedList<E> extends AbstractList<E> {
            count++;
     }
 
+        /**
+     * metodo que limpia la lista
+     */
     @Override
     public void clear() {
         head=null;
         count=0;
     }
-
+    
+        /**
+     * metodo que obtiene elemento al final de la lista
+     * @return valor del elemento
+     */
     @Override
     public E getLast() {
 
@@ -84,6 +119,10 @@ public class SinglyLinkedList<E> extends AbstractList<E> {
         return (E)node.info;
     }
 
+        /**
+     * metodo que revueve el ultimo elemento de la lista
+     * @return valor del elemento
+     */
     @Override
     public E removeLast() {
         Node node1 = head;
