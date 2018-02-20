@@ -1,6 +1,11 @@
 
 package ht4;
 
+/**
+ * @author Rodrigo Urrutia 16139
+ * @author Kevin Macario 17369
+ * @version 19.02.2018
+ */
 
 class StackFactory<E> {
 //selecciona la implementacion a utilizar para un stack
@@ -16,11 +21,11 @@ class StackFactory<E> {
                
                 switch(entry2){
                     case "SIMPLE":
-                        return new StackList(new SinglyLinkedList<>()); //regresa ArrayList
+                        return new StackList(new SinglyLinkedList<>()); //regresa SinglyLinkedList
                     case "DOBLE":
-                        return new StackList(new DoublyLinkedList<>()); //regresa Vector
+                        return new StackList(new DoublyLinkedList<>()); //regresa DoublyLinkedList
                     case "CIRCULAR":
-                        return new StackList(new CircularList<>()); //regresa Vector
+                        return new StackList(new CircularList<>()); //regresa CircularList
                }
                 
            default:

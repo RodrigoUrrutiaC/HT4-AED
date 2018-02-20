@@ -15,6 +15,8 @@ public interface CalculadoraI {
     /**
      * metodo que define que opera escritura tipo postfix
      * @param exp, linea con operaciones postfix
+     * @param x
+     * @param y
      * @return resultado de la operacion
      */
     public String calcular(String exp, int x, int y);

@@ -9,7 +9,7 @@ package ht4;
 
 /**
  * Calculadora
- *Clase que implementa la interfaz de calculadora
+ * Clase que implementa la interfaz de calculadora
  */
 public class Calculadora implements CalculadoraI{
 
@@ -71,7 +71,7 @@ public class Calculadora implements CalculadoraI{
         String respuesta, k;
         int t, ans, p;
 
-//        try{
+        try{
             for(int i=0; i< exp.length(); i++){
            
            j = exp.charAt(i);
@@ -129,11 +129,11 @@ public class Calculadora implements CalculadoraI{
             
         return respuesta;
               
-//        }
-//        
-//        catch(Exception e){
-//            return "MATH ERROR";
-//        }  
+        }
+        
+        catch(Exception e){
+            return "MATH ERROR";
+        }  
         
     }
 

@@ -25,7 +25,7 @@ public class MainCalculadora extends StackVector {
         Calculadora c = new Calculadora();
         
 //        try y catch para leer un archixo txt de nombre "datos", debe de estar en la misma ruta que el programa calculadora
-//        try{
+        try{
           
             Scanner s = new Scanner(System.in);
 
@@ -47,10 +47,10 @@ public class MainCalculadora extends StackVector {
                 System.out.println(""+linea+" = "+respuesta);
             }
             
-//        }
+        }
         //si no logra leer el archivo o no lo encuentra muestra una alerta
-//        catch(Exception ex){
-//            System.out.print("INCAPACIDAD PARA LEER EL ARCHIVO .TXT");
-//        }      
+        catch(Exception ex){
+            System.out.print("INCAPACIDAD PARA LEER EL ARCHIVO .TXT");
+        }      
     }   
 }
